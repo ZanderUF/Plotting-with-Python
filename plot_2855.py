@@ -4,9 +4,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-## import files with numpy's built in
-k6 = np.loadtxt("/Users/zanderm/Documents/tdkeno_report/Results/2855/updated_2855/rho_2855", skiprows=2)
-k5 = np.loadtxt("/Users/zanderm/Documents/tdkeno_report/Results/2855/updated_2855/rho_k5", skiprows=2)
+## import files with numpy's built in loadtxt function
+## on Mac must specify full path (location to the file)
+k6 = np.loadtxt("/Users/macosx/Documents/Plotting-with-Python", skiprows=2)
+#k5 = np.loadtxt("/Users/zanderm/Documents/tdkeno_report/Results/2855/updated_2855/rho_k5", skiprows=2)
 
 #kenovi rho file
 time = k6[:,0]
@@ -15,10 +16,10 @@ totPower=k6[:,4]
 reactivity = k6[:,5]
 
 #kenova rho file
-time2 = k5[:,0]
-power2 = k5[:,3] 
-totPower2=k5[:,4]
-reactivity2 = k5[:,5]
+#time2 = k5[:,0]
+#power2 = k5[:,3] 
+#totPower2=k5[:,4]
+#reactivity2 = k5[:,5]
 
 
 ##Plot

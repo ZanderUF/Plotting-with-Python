@@ -27,8 +27,8 @@ tdkeno_data = np.loadtxt("/Users/macosx/Documents/Plotting-with-Python/test_rho"
 
 #-------How to select the data you just imported--------#
 ## Rho file
-time = tdkeno_data[:,0]  # corresponds to first row
-power = tdkeno_data[:,3] # fourth row
+time = tdkeno_data[:,0]  # corresponds to first column 
+power = tdkeno_data[:,3] # fourth column
 totPower=tdkeno_data[:,4] 
 reactivity = tdkeno_data[:,5]
 

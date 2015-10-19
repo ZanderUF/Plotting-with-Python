@@ -53,6 +53,10 @@ plt.xlim([0,8])  #-- Only changes the x
 ## ---Configure the legend --- ##
 plt.legend(loc='upper right',prop={'size':14},numpoints=1)
 
+## make label for x,y axis
+plt.xlabel('label (nice units kPa)')
+plt.ylabel('label (nice units ergs/s)')
+
 ##---- This just shows a nice grid --#
 plt.grid(True)
 

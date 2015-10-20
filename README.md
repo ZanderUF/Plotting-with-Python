@@ -1,4 +1,6 @@
 # Plotting-with-Python
-Plotting rhovsenergy.out with Python.  Other example are included
+#Author: Zander Mausolff
 
-go to PDF called how_to_python.pdf
+This repo contains files to plot data from text/CSV formats.  How to plot generic (2D) functions are also provided.
+
+Go to the PDF called how_to_python.pdf for details on setting up Python and using these templates.

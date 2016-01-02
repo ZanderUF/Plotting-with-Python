@@ -23,6 +23,8 @@ x = np.linspace(0,1,1000)
 y = np.exp(x)
 
 
+
+
 ## TO plot just put x and y as such
 plt.plot(x,y)
 

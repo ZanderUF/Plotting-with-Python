@@ -13,6 +13,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+##-------Change font to 'Times' throughout the plot---##
+from matplotlib import rcParams
+rcParams['font.family'] = 'serif'
+rcParams['font.serif'] = ['Times']
+## This is useful if you want the font in the plot to match
+## a paper, which for Microsoft Word templates, use Times New Roman
+## **NOTE, change change 'Times' to something else like 'Helvetica' if yyou so desire**
+
 ##-----------Import plain txt-------------------------##
 ## import files with numpy's built in loadtxt function
 ## on Mac must specify full path (location to the file)
@@ -32,26 +40,32 @@ power = tdkeno_data[:,3] # fourth row
 totPower=tdkeno_data[:,4] 
 reactivity = tdkeno_data[:,5]
 
+total = np.sum(totPower)
+normalize_power = totPower/total
+
+x=0
+norm_power = [x / total for x in totPower]
+
 ##----------------------------------------------------##
 ## Time to plot
 ## The data is conveniently just a list of numbers 
 ## So all you need to do is select which ones you want in your x,y
 
 ## GENERAL FORMAT (2D) :  plt.plot(X,Y,'color of line or dot,', label="label name",)
-plt.plot(time,power,'-r',label='run 1')
+plt.plot(time,normalize_power,'-r',label='run 1')
 
 
 ## Paramters to change on the plot ##
 plt.title('Pretty Cool Title')
 ## you can do things like change the scale ##
 plt.xscale('log')  
-plt.yscale('log')
+#plt.yscale('log')
 
 ## change the limits of the plot
 ## Otherwise will show some default amount based on data
 plt.xlim([0,8])  #-- Only changes the x 
 ## ---Configure the legend --- ##
-plt.legend(loc='upper right',prop={'size':14},numpoints=1)
+plt.legend(loc='upper left',prop={'size':14},numpoints=1)
 
 ##---- This just shows a nice grid --#
 plt.grid(True)

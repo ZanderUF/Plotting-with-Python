@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 ## import files with numpy's built in loadtxt function
 ## on Mac must specify full path (location to the file)
-k6 = np.loadtxt("/Users/macosx/Documents/Plotting-with-Python", skiprows=2)
+k6 = np.loadtxt("/Users/macosx/Documents/Plotting-with-Python/test_row", skiprows=2)
 #k5 = np.loadtxt("/Users/zanderm/Documents/tdkeno_report/Results/2855/updated_2855/rho_k5", skiprows=2)
 
 #kenovi rho file
@@ -15,6 +15,9 @@ power = k6[:,3]
 totPower=k6[:,4]
 reactivity = k6[:,5]
 
+#total = np.sum(totPower)
+
+print total
 #kenova rho file
 #time2 = k5[:,0]
 #power2 = k5[:,3] 
@@ -48,4 +51,4 @@ plt.xlim([0,8])
 plt.legend(loc='upper right',prop={'size':14},numpoints=1)
 plt.grid(True)
 
-plt.show()
+#plt.show()

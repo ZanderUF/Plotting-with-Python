@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 ##-------Change font to 'Times' throughout the plot---##
 from matplotlib import rcParams
 rcParams['font.family'] = 'serif'
-rcParams['font.serif'] = ['Times']
+rcParams['font.serif'] = ['Times New Roman']
 ## This is useful if you want the font in the plot to match
 ## a paper, which for Microsoft Word templates, use Times New Roman
 ## **NOTE, change change 'Times' to something else like 'Helvetica' if yyou so desire**

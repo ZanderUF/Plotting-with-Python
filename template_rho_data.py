@@ -10,24 +10,22 @@
 ## "as" just allows you to make a short hand for numpy
 ## "numpy as np" is just a common comvention you can use 
 ##  anything you like
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-##-------Change font to 'Times' throughout the plot---##
+##-------Change font to 'Times New Roman' throughout the plot---##
 from matplotlib import rcParams
 rcParams['font.family'] = 'serif'
 rcParams['font.serif'] = ['Times New Roman']
-## This is useful if you want the font in the plot to match
-## a paper, which for Microsoft Word templates, use Times New Roman
-## **NOTE, change change 'Times' to something else like 'Helvetica' if yyou so desire**
 
-##-----------Import plain txt-------------------------##
-## import files with numpy's built in loadtxt function
-## on Mac must specify full path (location to the file)
-## np.loadtxt works better for plain text files
-tdkeno_data = np.loadtxt("/Users/macosx/Documents/Plotting-with-Python/test_rho", skiprows=2)
-## skip rows just skips the first two rows of your file
-## GENERAL ---> k6 = np.loadtxt("PATH TO FILE", skiprows=2)
+##------Simplified file input--------#
+## Usage:  just put the file name with your data in "file_name"
+## 	   file must be in the directory where this script is.
+ 
+current_dir = os.getcwd()
+file_name = "the_name_of_your_file_here"
+tdkeno_data = np.loadtxt(current_dir + "/" + file_name, skiprows=2)
 
 #------- For CSV files (comma-delimited) -------#
 #csv_data = np.genfromtxt('PATH TO CSV FILE',delimiter=',',usecols=(1,4,13))
@@ -40,9 +38,9 @@ power = tdkeno_data[:,3] # fourth column
 totPower=tdkeno_data[:,4] 
 reactivity = tdkeno_data[:,5]
 
+##---Normalize some parameter--##
 total = np.sum(totPower)
 normalize_power = totPower/total
-
 x=0
 norm_power = [x / total for x in totPower]
 
